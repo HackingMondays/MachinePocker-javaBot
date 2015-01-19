@@ -22,11 +22,7 @@ public class HelloResource {
     @PermitAll
     public Integer getBot(Game game) {
         Bet betting = game.getBetting();
-        betting.setCall(10);
-        betting.setCanRaise(true);
-        betting.setRaise(20);
         if (betting.isCanRaise()) {
-
             int choice = getRandomTill(3);
             switch (choice) {
                 case 1:
